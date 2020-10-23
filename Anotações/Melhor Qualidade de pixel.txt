@@ -1,0 +1,2 @@
+Selecionar todas as imagens desejadas e marcar a opção filter mode para "point, no filter"
+Tem que apertar apply.

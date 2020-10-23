@@ -7,7 +7,7 @@ public class playerScript : MonoBehaviour
     private     Animator    playerAnimator;
     public      Transform   groundedCheck;//Verificar se ha uma colisão com personagem.. lembrando que é necessário puxar o tranform para a variavel la no unity 
     public      Rigidbody2D playerRb;
-    public      Collider2D standing, crounching;
+    public      Collider2D  standing, crounching;
    
     
     public      bool        Grounded;       //Indica se o personagem está pisando em alguma superfice
@@ -16,7 +16,7 @@ public class playerScript : MonoBehaviour
     public      float       speed;          //Velocidade do player
     public      float       forceJump;      //Velocidade do pulo
     public      bool        attacking;
-    public     float       h, v;
+    private     float       h, v;
 
 
 

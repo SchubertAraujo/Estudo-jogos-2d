@@ -38,6 +38,18 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Background
+    uniqueID: 3056615783
+    locked: 0
+  - name: Paredes
+    uniqueID: 658655629
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Plataformas
+    uniqueID: 2692549873
+    locked: 0
+  - name: Decoracao PrimeiroPlano
+    uniqueID: 1749485159
     locked: 0

@@ -1,0 +1,4 @@
+Lembrar se de adicionar a aba tile palette em window > 2d > tilepalette
+Para facilitar a criaçao do cenario, ao inves de ir adicionando sprite por sprite,
+criar um new palete, usar sprite sheet montado, usar o slice para recortar no tamanho que está cada sprite,
+depois arrasta lo para o novo palette criado e ele vai adicionar todos de uma vez so.

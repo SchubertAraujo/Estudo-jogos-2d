@@ -1,3 +1,4 @@
 O unity reascala a resolução para adequar ao certo dispositivo.
 Formato NPOT consome muito processamento e deve ser convertido para POT.
 Alguns dispotisitos não tem suporte para este formato tambem.
+(Essa opçao foi retirada do unity 2019)

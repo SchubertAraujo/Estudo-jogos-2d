@@ -1,0 +1,3 @@
+Usaar um colisor circular, e ajusta lo para o centro do corpo do personagens.
+Não esquecer que usar o freeze rotation z.
+Ajudar os colisores retangulares para o meio do circulo

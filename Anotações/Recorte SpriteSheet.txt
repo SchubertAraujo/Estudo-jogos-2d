@@ -1,0 +1,2 @@
+Seleciona o spritesheet(Images com sprites de persongens ou cenário),
+clicar em sprite editor e selecionar "slice", "grid cell by cell" e colocar o tamanho da sprite
