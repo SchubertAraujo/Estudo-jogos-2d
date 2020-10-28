@@ -1,0 +1,3 @@
+para acessar a o physics2d
+edit -> project settings -> physics2d
+E possivel fazer alteraçoes para q o personagem caia "para cima"

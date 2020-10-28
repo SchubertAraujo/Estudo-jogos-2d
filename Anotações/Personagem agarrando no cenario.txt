@@ -1,3 +1,18 @@
+// Aqui resolve o problema do chão
 Usaar um colisor circular, e ajusta lo para o centro do corpo do personagens.
 Não esquecer que usar o freeze rotation z.
 Ajudar os colisores retangulares para o meio do circulo
+
+//Aqui resolve o problema da parede.
+//Possiveis Solucões
+Criar um physic material, colocar friction 0 e adicionar nos colisores do personagem
+Para criar e so com botao esquedo do mouse na pasta selecionar "create/Pyshics2d"
+Outra solução é selecionar o sprite que contem a parede que estar agarrando o personagem
+//Não esta funcionando e esta com colisor tendo espaços e agarrando o player na parede
+//Pois a imagens está com arestas
+Mudar a propriedade "mesh type" para "full rect". Depois ir ao objeto com timelapcollider
+deleta lo e crialo denovo.
+
+
+//Quando o personagem estiver "entrando" no chão 
+Selecionar o objeto do personagem , ir no rigidBody e alterar o collision detection para continuous(Consome mais processamento)

@@ -1,0 +1,2 @@
+edit -> project settings -> physics2d
+Possui uma matriz de qual layers vão colidir e as que não vão.

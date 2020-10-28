@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Weapon
   layers:
   - Default
   - TransparentFX
@@ -13,8 +14,8 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
+  - ground
+  - Interaction
   - 
   - 
   - 
@@ -43,6 +44,9 @@ TagManager:
     locked: 0
   - name: Paredes
     uniqueID: 658655629
+    locked: 0
+  - name: ObjetosDecoracao
+    uniqueID: 887268617
     locked: 0
   - name: Default
     uniqueID: 0

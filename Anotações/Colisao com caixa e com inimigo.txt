@@ -1,0 +1,3 @@
+caso o seja um objeto parado, setar propriedade "Sleeping mode" do RigidBody do objeto para "never sleep"
+pois o colisor de um objeto em movimento fica ativo e de um parado não fica.
+Verificar a velocidade da animação de ataque tambem. Ele pode estar mais rapida o update
