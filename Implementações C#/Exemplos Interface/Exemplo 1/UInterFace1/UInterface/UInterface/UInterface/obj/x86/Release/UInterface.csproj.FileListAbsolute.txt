@@ -1,0 +1,18 @@
+C:\Users\Mac\documents\visual studio 2010\Projects\UInterface\UInterface\bin\Release\UInterface.exe
+C:\Users\Mac\documents\visual studio 2010\Projects\UInterface\UInterface\bin\Release\UInterface.pdb
+C:\Users\Mac\documents\visual studio 2010\Projects\UInterface\UInterface\obj\x86\Release\ResolveAssemblyReference.cache
+C:\Users\Mac\documents\visual studio 2010\Projects\UInterface\UInterface\obj\x86\Release\UInterface.Form1.resources
+C:\Users\Mac\documents\visual studio 2010\Projects\UInterface\UInterface\obj\x86\Release\UInterface.Properties.Resources.resources
+C:\Users\Mac\documents\visual studio 2010\Projects\UInterface\UInterface\obj\x86\Release\GenerateResource.read.1.tlog
+C:\Users\Mac\documents\visual studio 2010\Projects\UInterface\UInterface\obj\x86\Release\GenerateResource.write.1.tlog
+C:\Users\Mac\documents\visual studio 2010\Projects\UInterface\UInterface\obj\x86\Release\UInterface.exe
+C:\Users\Mac\documents\visual studio 2010\Projects\UInterface\UInterface\obj\x86\Release\UInterface.pdb
+C:\Schubert\Estudos Unity\Implementações C#\Exemplos Interface\Exemplo 1\UInterFace1\UInterface\UInterface\UInterface\bin\Release\UInterface.exe
+C:\Schubert\Estudos Unity\Implementações C#\Exemplos Interface\Exemplo 1\UInterFace1\UInterface\UInterface\UInterface\bin\Release\UInterface.pdb
+C:\Schubert\Estudos Unity\Implementações C#\Exemplos Interface\Exemplo 1\UInterFace1\UInterface\UInterface\UInterface\obj\x86\Release\UInterface.csprojAssemblyReference.cache
+C:\Schubert\Estudos Unity\Implementações C#\Exemplos Interface\Exemplo 1\UInterFace1\UInterface\UInterface\UInterface\obj\x86\Release\UInterface.Form1.resources
+C:\Schubert\Estudos Unity\Implementações C#\Exemplos Interface\Exemplo 1\UInterFace1\UInterface\UInterface\UInterface\obj\x86\Release\UInterface.Properties.Resources.resources
+C:\Schubert\Estudos Unity\Implementações C#\Exemplos Interface\Exemplo 1\UInterFace1\UInterface\UInterface\UInterface\obj\x86\Release\UInterface.csproj.GenerateResource.cache
+C:\Schubert\Estudos Unity\Implementações C#\Exemplos Interface\Exemplo 1\UInterFace1\UInterface\UInterface\UInterface\obj\x86\Release\UInterface.csproj.CoreCompileInputs.cache
+C:\Schubert\Estudos Unity\Implementações C#\Exemplos Interface\Exemplo 1\UInterFace1\UInterface\UInterface\UInterface\obj\x86\Release\UInterface.exe
+C:\Schubert\Estudos Unity\Implementações C#\Exemplos Interface\Exemplo 1\UInterFace1\UInterface\UInterface\UInterface\obj\x86\Release\UInterface.pdb

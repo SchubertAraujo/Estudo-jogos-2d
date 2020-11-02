@@ -1,0 +1,12 @@
+Prefab é um tipo de asset que pode ser entendido como um GameObject armazenado no Project.
+
+Um prefab pode ser inserido em diversas Scenes, diversas vezes. 
+Quando você adiciona um Prefab a uma Scene, você cria uma Instância dele. 
+Todas as instâncias de um prefab estão conectadas com o prefab original.
+
+Quando você faz uma alteração em um prefab, todas suas instâncias, em todas as cenas, são alteradas automaticamente.
+
+Prefabs são uteis para compartilhar elementos iguais entre diversas |Scenes. 
+Por exemplo, você pode salvar o GameObject de um inimigo em um prefab, 
+e reutilizá-lo diversas vezes em diversas Scenes. 
+Se precisar alterar, por exemplo, a força de um inimigo, a alteração do prefab será aplicada para todas suas instancias, economizando muito do seu tempo.

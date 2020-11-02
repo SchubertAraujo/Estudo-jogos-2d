@@ -16,7 +16,7 @@ TagManager:
   - 
   - ground
   - Interaction
-  - 
+  - Inimigo
   - 
   - 
   - 
@@ -56,4 +56,7 @@ TagManager:
     locked: 0
   - name: Decoracao PrimeiroPlano
     uniqueID: 1749485159
+    locked: 0
+  - name: HUD
+    uniqueID: 423853547
     locked: 0

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Runtime.ExceptionServices;
 using UnityEngine;
 
-public class playerScript : MonoBehaviour
+public class PlayerScript : MonoBehaviour
 {
     private     Animator    playerAnimator;
     public      Transform   groundedCheck;//Verificar se ha uma colisão com personagem.. lembrando que é necessário puxar o tranform para a variavel la no unity 
@@ -12,7 +12,7 @@ public class playerScript : MonoBehaviour
     public      LayerMask   whatIsGround;
 
     //Interação com objetos
-    public      Transform   hand;
+    public      Transform   hand;     //define o local aonde o ray cast 2d será inicializado.
     private     Vector3     direction = Vector3.right; //Inicia um Vector3 para o lado direito
     public      LayerMask   interactionLayer;
     public      GameObject  objectInteracion;
@@ -28,7 +28,6 @@ public class playerScript : MonoBehaviour
     public      float       forceJump;      //Velocidade do pulo
     public      bool        attacking;
     private     float       h, v;
-    
 
 
 
@@ -98,7 +97,7 @@ public class playerScript : MonoBehaviour
         lookingLeft = !lookingLeft; //Inverte o valor booleano
         float x = transform.localScale.x;
         x *= -1; //Inverte o sinal de scale x
-        transform.localScale = new  Vector3(x, transform.localScale.y, transform.localScale.x);
+        transform.localScale = new  Vector3(x, transform.localScale.y, 0);
 
         //Muda a direção do drawray
         direction.x = x;
@@ -221,6 +220,8 @@ public class playerScript : MonoBehaviour
 
         
     }
+
+    //é usando como evento na animação de ataque
 
     void weaponControl(int id)
     {

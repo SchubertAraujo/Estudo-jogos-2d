@@ -1,0 +1,13 @@
+C:\Schubert\Estudos Unity\Implementações C#\Exemplos Interface\Exemplo 1\UInterFace1\Exemplo1\obj\Debug\netcoreapp3.1\Exemplo1.csprojAssemblyReference.cache
+C:\Schubert\Estudos Unity\Implementações C#\Exemplos Interface\Exemplo 1\UInterFace1\Exemplo1\obj\Debug\netcoreapp3.1\Exemplo1.AssemblyInfoInputs.cache
+C:\Schubert\Estudos Unity\Implementações C#\Exemplos Interface\Exemplo 1\UInterFace1\Exemplo1\obj\Debug\netcoreapp3.1\Exemplo1.AssemblyInfo.cs
+C:\Schubert\Estudos Unity\Implementações C#\Exemplos Interface\Exemplo 1\UInterFace1\Exemplo1\obj\Debug\netcoreapp3.1\Exemplo1.csproj.CoreCompileInputs.cache
+C:\Schubert\Estudos Unity\Implementações C#\Exemplos Interface\Exemplo 1\UInterFace1\Exemplo1\bin\Debug\netcoreapp3.1\Exemplo1.exe
+C:\Schubert\Estudos Unity\Implementações C#\Exemplos Interface\Exemplo 1\UInterFace1\Exemplo1\bin\Debug\netcoreapp3.1\Exemplo1.deps.json
+C:\Schubert\Estudos Unity\Implementações C#\Exemplos Interface\Exemplo 1\UInterFace1\Exemplo1\bin\Debug\netcoreapp3.1\Exemplo1.runtimeconfig.json
+C:\Schubert\Estudos Unity\Implementações C#\Exemplos Interface\Exemplo 1\UInterFace1\Exemplo1\bin\Debug\netcoreapp3.1\Exemplo1.runtimeconfig.dev.json
+C:\Schubert\Estudos Unity\Implementações C#\Exemplos Interface\Exemplo 1\UInterFace1\Exemplo1\bin\Debug\netcoreapp3.1\Exemplo1.dll
+C:\Schubert\Estudos Unity\Implementações C#\Exemplos Interface\Exemplo 1\UInterFace1\Exemplo1\bin\Debug\netcoreapp3.1\Exemplo1.pdb
+C:\Schubert\Estudos Unity\Implementações C#\Exemplos Interface\Exemplo 1\UInterFace1\Exemplo1\obj\Debug\netcoreapp3.1\Exemplo1.dll
+C:\Schubert\Estudos Unity\Implementações C#\Exemplos Interface\Exemplo 1\UInterFace1\Exemplo1\obj\Debug\netcoreapp3.1\Exemplo1.pdb
+C:\Schubert\Estudos Unity\Implementações C#\Exemplos Interface\Exemplo 1\UInterFace1\Exemplo1\obj\Debug\netcoreapp3.1\Exemplo1.genruntimeconfig.cache

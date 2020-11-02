@@ -1,0 +1,7 @@
+Interface por padrão do net.framerwork é necessário colocar um "I" maiusculo na frente do nome da interface
+Uma interface, no paradigma da orientação a objetos, é  um tipo de classe que contém apenas as assinaturas de métodos, propriedades, eventos e indexadores.
+
+A implementaçao dos membros é feita através de calsse concreta ou struct que implementa a inteface
+
+No C# a sintaxe usada para indicar a utilizaçao de uma interface é colocar dois ponto apos o nome da classe concreta.
+Que vai implementar a interface seguido do nome da interface. Ex: Produto : IProduto;

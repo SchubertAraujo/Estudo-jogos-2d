@@ -1,0 +1,6 @@
+Criar um objeto vazio
+Adcionar um circle collider 2D.
+Adcionar o point effector 2D.
+//Propriedades 
+force magnitude é distancia do knokback. positivo para um lado direito, negativo para o lado direito.
+force variation é a distancia do magnitude + a variaton. 0 para ter um valor fixo
