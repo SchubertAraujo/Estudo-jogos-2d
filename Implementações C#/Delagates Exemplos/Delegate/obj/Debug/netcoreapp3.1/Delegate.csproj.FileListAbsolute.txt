@@ -11,3 +11,16 @@ C:\Schubert\Estudos Unity\Delagates Exemplos\Delegate\obj\Debug\netcoreapp3.1\De
 C:\Schubert\Estudos Unity\Delagates Exemplos\Delegate\obj\Debug\netcoreapp3.1\Delegate.dll
 C:\Schubert\Estudos Unity\Delagates Exemplos\Delegate\obj\Debug\netcoreapp3.1\Delegate.pdb
 C:\Schubert\Estudos Unity\Delagates Exemplos\Delegate\obj\Debug\netcoreapp3.1\Delegate.genruntimeconfig.cache
+C:\Schubert\Estudos Unity\Implementações C#\Delagates Exemplos\Delegate\bin\Debug\netcoreapp3.1\Delegate.exe
+C:\Schubert\Estudos Unity\Implementações C#\Delagates Exemplos\Delegate\bin\Debug\netcoreapp3.1\Delegate.deps.json
+C:\Schubert\Estudos Unity\Implementações C#\Delagates Exemplos\Delegate\bin\Debug\netcoreapp3.1\Delegate.runtimeconfig.json
+C:\Schubert\Estudos Unity\Implementações C#\Delagates Exemplos\Delegate\bin\Debug\netcoreapp3.1\Delegate.runtimeconfig.dev.json
+C:\Schubert\Estudos Unity\Implementações C#\Delagates Exemplos\Delegate\bin\Debug\netcoreapp3.1\Delegate.dll
+C:\Schubert\Estudos Unity\Implementações C#\Delagates Exemplos\Delegate\bin\Debug\netcoreapp3.1\Delegate.pdb
+C:\Schubert\Estudos Unity\Implementações C#\Delagates Exemplos\Delegate\obj\Debug\netcoreapp3.1\Delegate.csprojAssemblyReference.cache
+C:\Schubert\Estudos Unity\Implementações C#\Delagates Exemplos\Delegate\obj\Debug\netcoreapp3.1\Delegate.AssemblyInfoInputs.cache
+C:\Schubert\Estudos Unity\Implementações C#\Delagates Exemplos\Delegate\obj\Debug\netcoreapp3.1\Delegate.AssemblyInfo.cs
+C:\Schubert\Estudos Unity\Implementações C#\Delagates Exemplos\Delegate\obj\Debug\netcoreapp3.1\Delegate.csproj.CoreCompileInputs.cache
+C:\Schubert\Estudos Unity\Implementações C#\Delagates Exemplos\Delegate\obj\Debug\netcoreapp3.1\Delegate.dll
+C:\Schubert\Estudos Unity\Implementações C#\Delagates Exemplos\Delegate\obj\Debug\netcoreapp3.1\Delegate.pdb
+C:\Schubert\Estudos Unity\Implementações C#\Delagates Exemplos\Delegate\obj\Debug\netcoreapp3.1\Delegate.genruntimeconfig.cache

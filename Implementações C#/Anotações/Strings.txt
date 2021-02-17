@@ -1,0 +1,2 @@
+Strings no c# são imutavéis, logo toda vez que se define um valor para ele, é criado um espaço em memória.
+Se for usar para concatenação usar string.Format.

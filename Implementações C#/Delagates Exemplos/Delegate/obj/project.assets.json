@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Schubert\\Estudos Unity\\Delagates Exemplos\\Delegate\\Delegate.csproj",
+      "projectUniqueName": "C:\\Schubert\\Estudos Unity\\Implementações C#\\Delagates Exemplos\\Delegate\\Delegate.csproj",
       "projectName": "Delegate",
-      "projectPath": "C:\\Schubert\\Estudos Unity\\Delagates Exemplos\\Delegate\\Delegate.csproj",
+      "projectPath": "C:\\Schubert\\Estudos Unity\\Implementações C#\\Delagates Exemplos\\Delegate\\Delegate.csproj",
       "packagesPath": "C:\\Users\\SCHUBERT PC\\.nuget\\packages\\",
-      "outputPath": "C:\\Schubert\\Estudos Unity\\Delagates Exemplos\\Delegate\\obj\\",
+      "outputPath": "C:\\Schubert\\Estudos Unity\\Implementações C#\\Delagates Exemplos\\Delegate\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\SCHUBERT PC\\AppData\\Roaming\\NuGet\\NuGet.Config",

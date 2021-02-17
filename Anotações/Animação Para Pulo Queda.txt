@@ -1,0 +1,6 @@
+No animator, criar um blend tree
+Criar a transição e clicar duas vezes no blend tree
+Criar dois motions no inspector e arrastar a animação de fall e jump
+selecionar o motion ou 1 ou 2 e colocar o tempo -0.02 ate 0.02 e colocar a linha no meio
+com sinal de "-" entendemos que ele está caindo, e com o sinal de mais que ele está subindo
+Após selecionar a transição, abrir a aba Settings e desmaracar o can transition true

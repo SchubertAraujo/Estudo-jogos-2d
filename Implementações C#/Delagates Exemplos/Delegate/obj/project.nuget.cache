@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Y5mnkbEufBloCWiTPuoILxu+mlwpfgyRGJiWqbwIEx5TgLh+ImkNIIhSpiEryI/LQTugA+EuJ/cRkZkJWuk0oQ==",
+  "dgSpecHash": "SUCYwlissM9WmU3EaS/zTX+ISKtiTxLdRPg/lJnsMP7//kJrxQCdqLFcK63OL44nVreVDE5ZhnDsd5nawIfhDg==",
   "success": true,
-  "projectFilePath": "C:\\Schubert\\Estudos Unity\\Delagates Exemplos\\Delegate\\Delegate.csproj",
+  "projectFilePath": "C:\\Schubert\\Estudos Unity\\Implementações C#\\Delagates Exemplos\\Delegate\\Delegate.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

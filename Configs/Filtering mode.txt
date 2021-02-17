@@ -1,0 +1,11 @@
+Bilinear -> A textura nao recebe nenhum tratameto, ela aparece como foi colocada.
+Trilinear > É uma terceira linha de textura que suavisa as texturas ficando com a imagem mais agradavel.
+
+
+
+Texto da internet
+
+"Infelizmente tanto a filtragem trilinear quanto a bilinear pecam na criação de texturas oblíquas. 
+Ou seja, o desenho criado para quem olha a figura de um ângulo próximo de 90 graus é nítido, 
+mas a qualidade diminui à medida que o objeto se aproxima de ângulos menores. 
+Isto se dá por conta de que a fórmula é eficiente para o primeiro caso, mas apresenta falhas no segundo."

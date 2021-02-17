@@ -47,6 +47,7 @@ namespace Delegate
         }
 
 
+ 
         public static void AcoesComRetorno(string Acao, string nome)
         {
             // O Action pode ser altarado para "Func" e passar variaveis da função depois a do retorno

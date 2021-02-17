@@ -5,11 +5,15 @@ using UnityEngine;
 
 public class PlayerScript : MonoBehaviour
 {
+    private     GameController gameController;
+
     private     Animator    playerAnimator;
     public      Transform   groundedCheck;//Verificar se ha uma colisão com personagem.. lembrando que é necessário puxar o tranform para a variavel la no unity 
     public      Rigidbody2D playerRb;
     public      Collider2D  standing, crounching;
-    public      LayerMask   whatIsGround;
+    public      LayerMask   whatIsGround; //Verifica quais layers/Camadas que o personagem vai interagir
+
+    public      int         maxHealthPlayer, currentHealthPlayer;
 
     //Interação com objetos
     public      Transform   hand;     //define o local aonde o ray cast 2d será inicializado.
@@ -19,6 +23,7 @@ public class PlayerScript : MonoBehaviour
 
     //Sistema de armas
     public      GameObject[] weapons;
+    public      GameObject   ballonAlert;
 
 
     public      bool        Grounded;       //Indica se o personagem está pisando em alguma superfice
@@ -30,17 +35,20 @@ public class PlayerScript : MonoBehaviour
     private     float       h, v;
 
 
-
-
     // Start is called before the first frame update
     void Start()
     {
+        gameController = FindObjectOfType(typeof(GameController)) as GameController;
+        
+
+        currentHealthPlayer = maxHealthPlayer;
+
         //Passar para variavel o componente do objeto
         playerAnimator = GetComponent<Animator>();
         playerRb = GetComponent<Rigidbody2D>();
 
         //Desabilita o objeto weapons
-        disable();
+        Disable();
        
     }
 
@@ -49,9 +57,11 @@ public class PlayerScript : MonoBehaviour
    {
         //Gera um circulo de colição com um raio escolhido
         Grounded = Physics2D.OverlapCircle(groundedCheck.position, 0.02f, whatIsGround);
+
+        
         //Faz o paler movimentar-se
         playerRb.velocity = new Vector2(h * speed, playerRb.velocity.y);
-        interaction();
+        Interaction();
     }
 
 
@@ -59,25 +69,24 @@ public class PlayerScript : MonoBehaviour
     void Update()
     {
         //Vai passar se o esta para para esquerda(-1) ou direita(1) de acordo com teclas;
-        //Ja esta configurado para "ad" e setas
+        //Ja esta configurado para "A/D" e setas
         h = Input.GetAxisRaw("Horizontal");
 
 
         //Vai passar se esta para cima(1) ou para baixo(-1) de acordo com teclas
-        //Ja esta configurado "ws"  seta
+        //Ja esta configurado "W/S"  seta
         v = Input.GetAxisRaw("Vertical");
 
         ChangeSides();
         ChangeAnimation();
-        inputsSelect();
+        InputsSelect();
 
 
         //Para atacar parado
         if (attacking && Grounded)
-        {
             h = 0;
-        }
         
+        //Quando o player abaixar mudar o colisor
         if (v < 0 && Grounded)
             ChangeCollider(true, false);
         else
@@ -92,12 +101,13 @@ public class PlayerScript : MonoBehaviour
         
     }
 
-    void flip()
+
+    void Flip()
     {
         lookingLeft = !lookingLeft; //Inverte o valor booleano
         float x = transform.localScale.x;
         x *= -1; //Inverte o sinal de scale x
-        transform.localScale = new  Vector3(x, transform.localScale.y, 0);
+        transform.localScale = new  Vector3(x, transform.localScale.y, 1); //Deixar o Z=1 pois senao quando houver mudança de luz o personagem ficara preto
 
         //Muda a direção do drawray
         direction.x = x;
@@ -105,7 +115,7 @@ public class PlayerScript : MonoBehaviour
 
     }
 
-    void disable()
+    void Disable()
     {
         foreach(GameObject o in weapons)
         {
@@ -125,13 +135,9 @@ public class PlayerScript : MonoBehaviour
     void ChangeSides()
     {
         if (h > 0 && lookingLeft && !attacking)
-        {
-            flip();
-        }
+            Flip();
         else if (h < 0 && !lookingLeft && !attacking)
-        {
-            flip();
-        }
+            Flip();
     }
 
     //Muda a id animaçao;
@@ -141,27 +147,21 @@ public class PlayerScript : MonoBehaviour
         {
             idAnimation = 2;
             if (Grounded)
-            {
                 h = 0;
-            }
-
         }
         else if (h != 0)
-        {
             idAnimation = 1;
-        }
         else
-        {
             idAnimation = 0;
-        }
+
     }
 
-    void atack(int atk)
+    void Atack(int atk)
     {
         switch(atk) 
         {
             case 0:
-               attacking = false;
+                attacking = false;
                 weapons[2].SetActive(false);
                 break;
             case 1:
@@ -171,31 +171,35 @@ public class PlayerScript : MonoBehaviour
         }
     }
 
-    void inputsSelect()
+    void InputsSelect()
     {
+        bool conditionObjectInteraction = objectInteracion == null;
+        bool conditionButtonFire = Input.GetButtonDown("Fire1") && v >= 0 && attacking == false;
         //Botão preconfigurado em 
-        if (Input.GetButtonDown("Fire1") && v >= 0 && attacking == false && objectInteracion == null)
-        {
+        if (conditionButtonFire && conditionObjectInteraction) 
             playerAnimator.SetTrigger("atack");
-        }
-        
-        if (Input.GetButtonDown("Fire1") && v >= 0 && attacking == false && objectInteracion != null)
+
+
+        //Faz com que caso não exita o objeto interação, nao retorna mensagem de erro
+        //Primeiro parametro busca o metodo do chestScript interacionChest
+        //Isso acontece pois o objeto "Silver chest" esta na layer iteraction que é setada na
+        //variavel objectInteracion no unity
+        if (conditionButtonFire && !conditionObjectInteraction)
         {
-            //Faz com que caso não exita o objeto interação, nao retorna mensagem de erro
-            //Primeiro parametro busca o metodo do chestScript interacionChest
-            //Isso acontece pois o objeto "Silver chest" esta na layer iteraction que é setada na
-            //variavel objectInteracion no unity
-            objectInteracion.SendMessage("interactionChest", SendMessageOptions.DontRequireReceiver);
+            if (objectInteracion.tag == "Door")
+                objectInteracion.GetComponent<DoorScript>().tPlayer = this.transform;
+
+            objectInteracion.SendMessage("Interaction", SendMessageOptions.DontRequireReceiver);
         }
+
 
         //faz o player pular so quando ele esta colidindo com o chão
         if (Input.GetButtonDown("Jump") && Grounded && !attacking)
-        {
             playerRb.AddForce(new Vector2(0, forceJump));
-        }
+
     }
 
-    void interaction()
+    void Interaction()
     {
         //Desenha uma linha q fara interação com objetos desejado
         //Será mostrada com a cor selecionada
@@ -210,24 +214,35 @@ public class PlayerScript : MonoBehaviour
         if (hit == true)
         {
             objectInteracion = hit.collider.gameObject;
-            
-        } 
+            ballonAlert.SetActive(true);
+        }
         else
         {
             objectInteracion = null;
+            ballonAlert.SetActive(false);
         }
-       
 
-        
+
+
     }
 
     //é usando como evento na animação de ataque
-
     void weaponControl(int id)
     {
-        disable();
+        Disable();
         weapons[id].SetActive(true);
-       
+
     }
+    
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        switch (collision.gameObject.tag)
+        {
+            case "LootTag":
+                collision.gameObject.SendMessage("Collect", SendMessageOptions.DontRequireReceiver);
+                break;       
+        }
+    }
+
 }
 

@@ -1,0 +1,2 @@
+Na unity a classe MonoBehaviour não aceita "Class object = New Class()"
+É necessário usar o addComponent da seguinte forma -> Class object = gameObject.AddComponent<Class>();
