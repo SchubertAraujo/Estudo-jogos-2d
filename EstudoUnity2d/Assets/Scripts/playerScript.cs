@@ -13,6 +13,8 @@ public class PlayerScript : MonoBehaviour
     public      Collider2D  standing, crounching;
     public      LayerMask   whatIsGround; //Verifica quais layers/Camadas que o personagem vai interagir
 
+    private SpriteRenderer sRender;
+
     public      int         maxHealthPlayer, currentHealthPlayer;
 
     //Interação com objetos
@@ -22,6 +24,8 @@ public class PlayerScript : MonoBehaviour
     public      GameObject  objectInteracion;
 
     //Sistema de armas
+    public      int          idWeapon;
+    public      int          idWeaponCurrent;
     public      GameObject[] weapons;
     public      GameObject   ballonAlert;
 
@@ -46,9 +50,11 @@ public class PlayerScript : MonoBehaviour
         //Passar para variavel o componente do objeto
         playerAnimator = GetComponent<Animator>();
         playerRb = GetComponent<Rigidbody2D>();
-
+        sRender = GetComponent<SpriteRenderer>();
         //Desabilita o objeto weapons
         Disable();
+
+        ChangeWeapon(idWeapon);
        
     }
 
@@ -59,7 +65,7 @@ public class PlayerScript : MonoBehaviour
         Grounded = Physics2D.OverlapCircle(groundedCheck.position, 0.02f, whatIsGround);
 
         
-        //Faz o paler movimentar-se
+        //Faz o player movimentar-se
         playerRb.velocity = new Vector2(h * speed, playerRb.velocity.y);
         Interaction();
     }
@@ -101,6 +107,13 @@ public class PlayerScript : MonoBehaviour
         
     }
 
+    private void LateUpdate()
+    {
+        if(idWeapon != idWeaponCurrent)
+        {
+            ChangeWeapon(idWeapon);
+        }
+    }
 
     void Flip()
     {
@@ -180,14 +193,12 @@ public class PlayerScript : MonoBehaviour
             playerAnimator.SetTrigger("atack");
 
 
-        //Faz com que caso não exita o objeto interação, nao retorna mensagem de erro
+        //Faz com que caso não exista o objeto interação, nao retorna mensagem de erro
         //Primeiro parametro busca o metodo do chestScript interacionChest
         //Isso acontece pois o objeto "Silver chest" esta na layer iteraction que é setada na
         //variavel objectInteracion no unity
         if (conditionButtonFire && !conditionObjectInteraction)
         {
-            if (objectInteracion.tag == "Door")
-                objectInteracion.GetComponent<DoorScript>().tPlayer = this.transform;
 
             objectInteracion.SendMessage("Interaction", SendMessageOptions.DontRequireReceiver);
         }
@@ -242,6 +253,42 @@ public class PlayerScript : MonoBehaviour
                 collision.gameObject.SendMessage("Collect", SendMessageOptions.DontRequireReceiver);
                 break;       
         }
+    }
+
+    public void ChangeMaterial(Material novoMaterial)
+    {
+        sRender.material = novoMaterial;
+        foreach(GameObject o in weapons)
+        {
+            o.GetComponent<SpriteRenderer>().material = novoMaterial;
+        }
+    }
+
+    public void ChangeWeapon(int id)
+    {
+        idWeapon = id;
+   
+        weapons[0].GetComponent<SpriteRenderer>().sprite = gameController.sWeapons0[idWeapon];
+        Damage(0, idWeapon);
+
+        weapons[1].GetComponent<SpriteRenderer>().sprite = gameController.sWeapons1[idWeapon];
+        Damage(1, idWeapon);
+
+        weapons[2].GetComponent<SpriteRenderer>().sprite = gameController.sWeapons2[idWeapon];
+        Damage(2, idWeapon);
+        idWeaponCurrent = idWeapon;
+
+
+
+    }
+
+    public void Damage(int id, int idWeap)
+    {
+        WeaponDamage weaponDamageTemp = weapons[id].GetComponent<WeaponDamage>();
+        weaponDamageTemp.damageMax = gameController.damageMax[idWeap];
+        weaponDamageTemp.damageMin = gameController.damageMin[idWeap];
+        weaponDamageTemp.typeDamage = gameController.typeDamage[idWeap];
+
     }
 
 }

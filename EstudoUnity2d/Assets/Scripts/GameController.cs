@@ -12,7 +12,17 @@ public class GameController : MonoBehaviour
     public  TextMeshProUGUI goldTxt;
     private FadeScript      fade;
 
+    [Header("Banco de Dados de Armas")]
 
+    public Sprite[] sWeapons0;
+    public Sprite[] sWeapons1;
+    public Sprite[] sWeapons2;
+
+    public int[] damageMin;
+    public int[] damageMax;
+    public int[] typeDamage;
+    public string[] weaponName;
+    public int[] weaponPrice;
 
     public void Start()
     {

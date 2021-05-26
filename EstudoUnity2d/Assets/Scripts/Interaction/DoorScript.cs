@@ -4,9 +4,12 @@ using UnityEngine;
 
 public class DoorScript : MonoBehaviour
 {
+
+
     private FadeScript  fade;
+    private PlayerScript playerScript;
     public  Transform   destiny;
-    public  Transform   tPlayer;
+ 
     public  bool        isDark;
     public  Material    light2D, default2D;
 
@@ -14,6 +17,7 @@ public class DoorScript : MonoBehaviour
     public void Start()
     {
         fade = FindObjectOfType(typeof(FadeScript)) as FadeScript;
+        playerScript = FindObjectOfType(typeof(PlayerScript)) as PlayerScript;
     }
     public void Interaction()
     {
@@ -25,15 +29,15 @@ public class DoorScript : MonoBehaviour
 
         fade.FadeIn();
         yield return new WaitWhile(() => fade.fume.color.a < 0.9f); // Uma condiçao que faz com que a corotina verifique se o color está completamente escuro, quando finalizado executas as açoes abaixo
-        tPlayer.gameObject.SetActive(false);
+        playerScript.gameObject.SetActive(false);
         if (isDark)
-            tPlayer.gameObject.GetComponent<SpriteRenderer>().material = light2D;
+            playerScript.ChangeMaterial(light2D);
         else
-            tPlayer.gameObject.GetComponent<SpriteRenderer>().material = default2D;
+            playerScript.ChangeMaterial(default2D);
 
-        tPlayer.position = destiny.position;
+        playerScript.transform.position = destiny.position;
         yield return new WaitForSeconds(0.5f);
-        tPlayer.gameObject.SetActive(true);
+        playerScript.gameObject.SetActive(true);
         fade.FadeOut();
     }
 }
