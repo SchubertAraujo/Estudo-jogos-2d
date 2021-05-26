@@ -1,0 +1,1 @@
+Para tirar a distorção que a cam machine dá diminua o valor em body -> X Damping e Y.Damping.
